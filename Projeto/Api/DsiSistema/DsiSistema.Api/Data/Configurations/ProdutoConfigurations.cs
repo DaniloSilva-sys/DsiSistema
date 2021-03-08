@@ -23,6 +23,10 @@ namespace DsiSistema.Api.Data.Configurations
             builder.Property(x => x.Descricao)
                 .HasMaxLength(50)
                 .IsRequired();
+
+
+            //exemple 1 para muitos
+            //builder.HasOne(x => x.CodigoBarra).WithMany().HasForeignKey("ID_QLQRCOISA");
         }
     }
 }

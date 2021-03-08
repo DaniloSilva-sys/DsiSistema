@@ -1,20 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
 using DsiSistema.Api.Data;
-using DsiSistema.Api.Data.Repository;
-using DsiSistema.Api.Models.Interfaces.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace DsiSistema.Api
 {
@@ -30,19 +20,14 @@ namespace DsiSistema.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.ConfigureMVC();
+            services.ConfigureRepositories();
+            services.ConfigureSwagger();
+            services.ConfigureAuthentication();
+            services.ConfigureContext(Configuration);
+            services.ConfigureControllers();
 
-            services.AddDbContext<DsiContext>(x => x.UseMySql(Configuration.GetConnectionString("conexao")));
-            services.AddControllers()
-                .AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-
-            services.AddSwaggerGen(//c => {
-
-        //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-        //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-        //c.IncludeXmlComments(xmlPath);
-        //}
-        );
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +45,13 @@ namespace DsiSistema.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseCors(x => {
+
+                x.AllowAnyHeader();
+                x.AllowAnyMethod();
+                x.AllowAnyOrigin();
             });
 
             app.UseSwagger();
