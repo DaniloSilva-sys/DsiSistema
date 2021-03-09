@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\DsiSistema\\Projeto\\Api\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj": {}
+    "C:\\Projetos\\DsiSistema\\Projeto\\Api_core\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\DsiSistema\\Projeto\\Api\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj": {
+    "C:\\Projetos\\DsiSistema\\Projeto\\Api_core\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\DsiSistema\\Projeto\\Api\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj",
+        "projectUniqueName": "C:\\Projetos\\DsiSistema\\Projeto\\Api_core\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj",
         "projectName": "DsiSistema.Api",
-        "projectPath": "C:\\Projetos\\DsiSistema\\Projeto\\Api\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj",
+        "projectPath": "C:\\Projetos\\DsiSistema\\Projeto\\Api_core\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj",
         "packagesPath": "C:\\Users\\Henrique Cristofer\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\DsiSistema\\Projeto\\Api\\DsiSistema\\DsiSistema.Api\\obj\\",
+        "outputPath": "C:\\Projetos\\DsiSistema\\Projeto\\Api_core\\DsiSistema\\DsiSistema.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Henrique Cristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",

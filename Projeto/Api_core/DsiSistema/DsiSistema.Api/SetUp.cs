@@ -81,18 +81,16 @@ namespace DsiSistema.Api
             }).AddJwtBearer(x => {
 
                 var paramsValidation = x.TokenValidationParameters;
-                //paramsValidation.IssuerSigningKey = signConfiguration.SigningCredentials.Key;
+                paramsValidation.IssuerSigningKey = signConfiguration.SigningCredentials.Key;
                 paramsValidation.ValidAudience = tokenConfigurations.Audience;
                 paramsValidation.ValidIssuer = tokenConfigurations.Issuer;
                 paramsValidation.ValidateIssuerSigningKey = true;
                 paramsValidation.ValidateLifetime = true;
                 paramsValidation.ClockSkew = TimeSpan.Zero;
-
             });
 
 
             services.AddAuthorization(x => {
-
                 x.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
                     .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
                     .RequireAuthenticatedUser().Build());

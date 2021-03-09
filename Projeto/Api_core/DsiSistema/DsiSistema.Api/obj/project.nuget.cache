@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GkJl1oyb8H4gqz8O/3JO0aLHrV4Xtc4dEymXh5DPI97ulOG6v0LkZoEWLRn4IbdIwsk/wnDq40ugyOqqhOvMTA==",
+  "dgSpecHash": "NbFLW+Sf91DSMh7mmrb1T4NBeNUB8ZCeee14IvHL1DIxeJLb5WTzll/DzptYBP9CvXxUbl4otZHlpPYCGcHZ5g==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\DsiSistema\\Projeto\\Api\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj",
+  "projectFilePath": "C:\\Projetos\\DsiSistema\\Projeto\\Api_core\\DsiSistema\\DsiSistema.Api\\DsiSistema.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Henrique Cristofer\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\Henrique Cristofer\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
